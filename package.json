@@ -3,11 +3,12 @@
   "private": true,
   "version": "0.0.0",
   "type": "module",
+  "homepage": "https://pop-a-peer.com/",
   "scripts": {
     "dev": "vite",
     "build": "vite build",
     "predeploy" : "npm run build",
-    "deploy" : "gh-pages -d dist"
+    "deploy" : "gh-pages -d dist --cname pop-a-peer.com"
   },
   "devDependencies": {
     "gh-pages": "^6.1.1",

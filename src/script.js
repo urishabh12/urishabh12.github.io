@@ -30,14 +30,19 @@ groundColorTexture.colorSpace = THREE.SRGBColorSpace
 /**
  * Lights
  */
-const ambientLight = new THREE.AmbientLight(0xffffff, 30)
-scene.add(ambientLight)
+// const ambientLight = new THREE.AmbientLight(0xffffff, 30)
+// scene.add(ambientLight)
 
-const pointLight = new THREE.PointLight(0xffffff, 30)
+const pointLight = new THREE.PointLight(0xffffff, 5)
 pointLight.position.x = 1
 pointLight.position.y = 1
 pointLight.position.z = 1
 scene.add(pointLight)
+
+const rectAreaLight = new THREE.RectAreaLight(0x4e00ff, 100, 4, 4)
+rectAreaLight.position.set(-1, 5, 2)
+rectAreaLight.lookAt(new THREE.Vector3(1, 1, 1))
+scene.add(rectAreaLight)
 
 // Ground Material
 const material = new THREE.MeshStandardMaterial()
